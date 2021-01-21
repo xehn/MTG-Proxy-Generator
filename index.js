@@ -345,7 +345,7 @@ function checkQuantity(input) {
 
 function showDisclaimer() {
   $(".disclaimer").prop('hidden', false);
-  $(".js-input-section").prop('hidden', true);
+  $(".js-input-section").prop('hidden', false);
   $(".js-results").prop('hidden', true);
   $("footer").prop('hidden', false);
 }
