@@ -23,7 +23,8 @@ function renderApplication(state) {
   
   else if(state.mode === MODES.EDIT) {
     
-    $(".js-queryList").attr("placeholder-x", `` + sampleDecklist);
+    $(".js-queryList").attr("placeholder-x", 
+`Enter a decklist here in MTGO format:\n\nHere's an example decklist:\n\n(Click 'Generate' to build this deck)\n\n` + sampleDecklist);
     
     $(".js-queryList").placeholder();
     
@@ -64,7 +65,7 @@ function renderApplication(state) {
           card.printsUri = data.prints_search_uri;
 
           //update card images:
-          if(data.layout === "transform" || data.layout == "modal_dfc") {
+          if(data.layout === "transform" || data.layout === "mdfc" ) {
 
               card.cardImage = (data.card_faces[0].image_uris) ? data.card_faces[0].image_uris.border_crop : ""
 
@@ -345,7 +346,7 @@ function checkQuantity(input) {
 
 function showDisclaimer() {
   $(".disclaimer").prop('hidden', false);
-  $(".js-input-section").prop('hidden', false);
+  $(".js-input-section").prop('hidden', true);
   $(".js-results").prop('hidden', true);
   $("footer").prop('hidden', false);
 }
