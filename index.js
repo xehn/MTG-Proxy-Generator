@@ -1,5 +1,6 @@
 let STATE = {
-  mode : MODES.DISCLAIMER,
+  //mode : MODES.DISCLAIMER,
+  mode : MODES.EDIT,
   deckList : null
 }
 
@@ -23,8 +24,7 @@ function renderApplication(state) {
   
   else if(state.mode === MODES.EDIT) {
     
-    $(".js-queryList").attr("placeholder-x", 
-`Enter a decklist here in MTGO format:\n\nHere's an example decklist:\n\n(Click 'Generate' to build this deck)\n\n` + sampleDecklist);
+    $(".js-queryList").attr("placeholder-x", `\n`);
     
     $(".js-queryList").placeholder();
     
