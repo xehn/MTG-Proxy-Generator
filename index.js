@@ -65,7 +65,7 @@ function renderApplication(state) {
           card.printsUri = data.prints_search_uri;
 
           //update card images:
-          if(data.layout === "transform" || data.layout === "mdfc" ) {
+          if(data.layout === "transform" || data.layout === "modal_dfc" ) {
 
               card.cardImage = (data.card_faces[0].image_uris) ? data.card_faces[0].image_uris.border_crop : ""
 
